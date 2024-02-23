@@ -31,7 +31,7 @@ export const routes = [
       },
       {
         icon: <TableCellsIcon {...icon} />,
-        name: "tables",
+        name: "All Books",
         path: "/tables",
         element: <Tables />,
       },

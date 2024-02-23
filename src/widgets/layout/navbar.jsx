@@ -79,6 +79,7 @@ export function Navbar({ brandName, routes, action }) {
         </div>
       </Collapse>
     </MTNavbar>
+    
   );
 }
 
