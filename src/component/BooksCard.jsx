@@ -9,12 +9,14 @@ import {
 } from "@material-tailwind/react";
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 
 export function BooksCard({ props }) {
-  const { image, title, author, page, date, category } = props;
+  const { image, title, author, page, date, category, id } = props;
   return (
+    <Link to={`singleBooks/${id}`}>
     <Card className="w-full flex flex-col justify-between max-w-[26rem] shadow-lg">
       <div>
         <CardHeader floated={false} color="blue-gray">
@@ -90,5 +92,6 @@ export function BooksCard({ props }) {
         </CardFooter>
       </div>
     </Card>
+    </Link>
   );
 }

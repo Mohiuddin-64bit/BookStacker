@@ -56,7 +56,7 @@ export function AllBooks() {
             </TabsHeader>
           </Tabs>
         </div>
-        <div className="">
+        <div>
           <Input label="Search" />
         </div>
       </div>
@@ -64,12 +64,12 @@ export function AllBooks() {
         {
           books.map((book, index) => (
             <BooksCard
+            id={index}
               key={index}
               props={book}
             />
           ))
         }
-
       </div>
     </div>
   );
