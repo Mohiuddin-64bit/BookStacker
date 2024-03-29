@@ -8,6 +8,7 @@ import {
   Footer,
 } from "@/widgets/layout";
 import routes from "@/routes";
+import { Menus } from "@/utils/Menus";
 import { useMaterialTailwindController, setOpenConfigurator } from "@/context";
 
 export function Dashboard() {
@@ -17,7 +18,7 @@ export function Dashboard() {
   return (
     <div className="min-h-screen bg-blue-gray-50/50">
       <Sidenav
-        routes={routes}
+        Menus={Menus}
         brandImg={
           sidenavType === "dark" ? "/img/logo-ct.png" : "/img/logo-ct-dark.png"
         }
@@ -43,7 +44,7 @@ export function Dashboard() {
               ))
           )}
         </Routes>
-        <div className="text-blue-gray-600">
+        <div className="text-blue-gray-600 mt-96">
           <Footer />
         </div>
       </div>

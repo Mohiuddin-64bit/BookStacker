@@ -24,7 +24,7 @@ export function AllBooks() {
       <div className="flex flex-col-reverse md:flex-row justify-between gap-3 mt-12">
         <div className="visible lg:hidden">
           <Select label="Select Category">
-            <Option>All</Option>
+            <Option defaultChecked>All</Option>
             <Option>Fiction</Option>
             <Option>Non-Fiction</Option>
             <Option>Science Fiction</Option>

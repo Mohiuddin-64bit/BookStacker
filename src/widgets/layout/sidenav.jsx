@@ -8,9 +8,10 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useMaterialTailwindController, setOpenSidenav } from "@/context";
-import Menus from "@/utils/Menus";
 
-export function Sidenav({ brandImg, brandName, routes }) {
+
+
+export function Sidenav({ brandImg, brandName, Menus }) {
   const [controller, dispatch] = useMaterialTailwindController();
   const { sidenavColor, sidenavType, openSidenav } = controller;
   const sidenavTypes = {
@@ -47,10 +48,10 @@ export function Sidenav({ brandImg, brandName, routes }) {
         </IconButton>
       </div>
       <div className="m-4">
-        <ul key={key} className="mb-4 flex flex-col gap-1">
+        <ul className="mb-4 flex flex-col gap-1">
           {Menus.map(({ icon, name, path }) => (
             <li key={name}>
-              <NavLink to={`/${layout}${path}`}>
+              <NavLink to={`/${"dashboard"}${path}`}>
                 {({ isActive }) => (
                   <Button
                     variant={isActive ? "gradient" : "text"}
